@@ -2,5 +2,7 @@
 # identify patterns leading to insights on sleep quality
 
 import pandas as pd
-sleep = pd.read_csv("sleep_health_data.csv")
-sleep.head()
+sleeps = pd.read_csv("sleep_health_data.csv")
+print(sleeps.head())
+
+

@@ -3,6 +3,11 @@
 
 import pandas as pd
 sleeps = pd.read_csv("sleep_health_data.csv")
-print(sleeps.head())
+sleeps.head()
 
-
+# which occupation has the lowest average sleep duration?
+avg_sleep_occ = sleeps.groupby('Occupation')['Sleep Duration'].mean()
+avg_sleep_occ = avg_sleep_occ.sort_values()
+lowest_sleep_occ = avg_sleep_occ.sort_values()index[0]
+lowest_sleep_occ = str(lowest_sleep_occ)
+print("The lowest average sleep duration occupation: " + str(lowest_sleep_occ))
